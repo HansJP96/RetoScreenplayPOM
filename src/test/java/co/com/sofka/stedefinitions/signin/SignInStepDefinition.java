@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 
 import static co.com.sofka.question.signin.FailedSignIn.failedSignIn;
 import static co.com.sofka.question.signin.FailedSignIn.getFailMessage;
@@ -32,7 +33,8 @@ public class SignInStepDefinition extends Setup {
     private final SignInModel userAccount = new SignInModel();
     private final Faker faker = new Faker();
 
-    @Given("que el usuario ya tiene una cuenta")
+
+   @Given("que el usuario ya tiene una cuenta")
     public void queElUsuarioYaTieneUnaCuenta() {
         actorSetupTheBrowser(ACTOR_NAME);
 
@@ -52,8 +54,10 @@ public class SignInStepDefinition extends Setup {
                     existingAccount()
                             .setUserData(account)
             );
+            LOGGER.info("Informacion de cuenta existente:\n"+ account);
         } catch (Exception exception) {
-            LOGGER.error("Error verificando cuenta existente", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error verificando cuenta existente");
         }
     }
 
@@ -66,7 +70,8 @@ public class SignInStepDefinition extends Setup {
                             browseToSignInPage()
                     );
         } catch (Exception exception) {
-            LOGGER.error("Error accediendo a la pagina registro");
+            LOGGER.error(exception.getMessage(),exception);
+            Assertions.fail("Error accediendo a la pagina registro");
         }
     }
 
@@ -75,7 +80,6 @@ public class SignInStepDefinition extends Setup {
         userAccount.setEmail(account.getEmail());
         userAccount.setPassword(account.getPassword());
         try {
-
             theActorInTheSpotlight()
                     .attemptsTo(
                             fillLoginFields()
@@ -83,8 +87,10 @@ public class SignInStepDefinition extends Setup {
                                     .typingAnUserPassword(userAccount.getPassword())
                                     .andClickingSignIn()
                     );
+            LOGGER.info("Datos ingresados para Sign In:\n"+ userAccount);
         } catch (Exception exception) {
-            LOGGER.error("Error rellenando los campos de login", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error rellenando los campos de login");
         }
     }
 
@@ -105,7 +111,6 @@ public class SignInStepDefinition extends Setup {
     public void elUsuarioDigitaSuEmailYUnaContrasenaIncorrectaYValidaLaAccion() {
         userAccount.setEmail(account.getEmail());
         userAccount.setPassword(faker.internet().password());
-
         try {
             theActorInTheSpotlight()
                     .attemptsTo(
@@ -114,8 +119,10 @@ public class SignInStepDefinition extends Setup {
                                     .typingAnUserPassword(userAccount.getPassword())
                                     .andClickingSignIn()
                     );
+            LOGGER.info("Datos ingresados para Sign In:\n"+ userAccount);
         } catch (Exception exception) {
-            LOGGER.error("Error rellenando los campos de login", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error rellenando los campos de login");
         }
     }
 
@@ -129,5 +136,4 @@ public class SignInStepDefinition extends Setup {
                         )
                 );
     }
-
 }

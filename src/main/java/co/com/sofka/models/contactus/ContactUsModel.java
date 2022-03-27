@@ -29,4 +29,13 @@ public class ContactUsModel {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "ContactUsModel{" +
+                "subjectHeading=" + subjectHeading +
+                ", email='" + email + '\'' +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }

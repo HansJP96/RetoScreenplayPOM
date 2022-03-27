@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 
 import static co.com.sofka.question.contactus.ContactUsFormIsDisplayed.contactUsFormIsDisplayed;
 import static co.com.sofka.question.contactus.SuccessfulSentMessage.getSuccessSentMessage;
@@ -21,7 +22,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 public class ContactUsStepDefinition extends Setup {
 
     private static final Logger LOGGER = Logger.getLogger(ContactUsStepDefinition.class);
-    private static final String ACTOR_NAME = "User";
+    private static final String ACTOR_NAME = "Visitor";
 
     private final ContactUsModel user = new ContactUsModel();
     private final Faker faker = new Faker();
@@ -35,7 +36,8 @@ public class ContactUsStepDefinition extends Setup {
                             openHomePage()
                     );
         } catch (Exception exception) {
-            LOGGER.error("Error accediendo al home de la pagina", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error accediendo al home de la pagina");
         }
     }
 
@@ -47,7 +49,8 @@ public class ContactUsStepDefinition extends Setup {
                             browseToContactUs()
                     );
         } catch (Exception exception) {
-            LOGGER.error("Error accediendo a la pagina de Contact Us", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error accediendo a la pagina de Contact Us");
         }
     }
 
@@ -72,7 +75,8 @@ public class ContactUsStepDefinition extends Setup {
                             browseToContactUs()
                     );
         } catch (Exception exception) {
-            LOGGER.error("Error accediendo a la pagina de Contact Us", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error accediendo a la pagina de Contact Us");
         }
     }
 
@@ -90,8 +94,10 @@ public class ContactUsStepDefinition extends Setup {
                                     .typingAMessage(user.getMessage())
                                     .andClickingSend()
                     );
+            LOGGER.info("Datos ingresados en el formulario de Contact Us:\n"+ user);
         } catch (Exception exception) {
-            LOGGER.error("Error rellenando los campos de login", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error rellenando los campos de login");
         }
     }
 

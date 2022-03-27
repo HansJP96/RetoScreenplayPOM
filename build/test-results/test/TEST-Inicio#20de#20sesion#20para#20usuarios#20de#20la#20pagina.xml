@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Inicio de sesion para usuarios de la pagina" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-27T19:29:43" hostname="LENOVO-PC" time="45.658">
+  <properties/>
+  <testcase name="Sign In de usuario exitoso" classname="Inicio de sesion para usuarios de la pagina" time="26.571"/>
+  <testcase name="Sign In de usuario fallido por contrasena incorrecta" classname="Inicio de sesion para usuarios de la pagina" time="19.087"/>
+  <system-out><![CDATA[2022-03-27 14:29:53 INFO  SignInStepDefinition:57 Informacion de cuenta existente:
+CreateAccountModel{firstName='Shandra', lastName='Reichel', email='stephenie.flatley@hotmail.com', password='UrMsZx6', address='19776 Hilpert Creek', city='New Corrina', state=32, postalCode='14144', mobilePhone='406-314-0786'}
+2022-03-27 14:30:08 INFO  SignInStepDefinition:90 Datos ingresados para Sign In:
+SignInModel{email='stephenie.flatley@hotmail.com', password='UrMsZx6'}
+2022-03-27 14:30:16 INFO  SignInStepDefinition:57 Informacion de cuenta existente:
+CreateAccountModel{firstName='Pablo', lastName='O'Connell', email='leonor.rogahn@yahoo.com', password='OjKsFP6uAl', address='398 Collier Highway', city='New Vinitahaven', state=14, postalCode='59634', mobilePhone='(584) 828-9917'}
+2022-03-27 14:30:28 INFO  SignInStepDefinition:122 Datos ingresados para Sign In:
+SignInModel{email='leonor.rogahn@yahoo.com', password='hwaefs5ncljj'}
+]]></system-out>
+  <system-err><![CDATA[mar. 27, 2022 2:29:43 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 21381
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar. 27, 2022 2:29:46 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+mar. 27, 2022 2:30:10 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 31818
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar. 27, 2022 2:30:12 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

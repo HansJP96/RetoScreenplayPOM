@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Atencion al cliente para visitantes de la pagina web" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-27T05:55:02" hostname="LENOVO-PC" time="33.488">
+<testsuite name="Atencion al cliente para visitantes de la pagina web" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-27T19:28:12" hostname="LENOVO-PC" time="36.441">
   <properties/>
-  <testcase name="Visitante de la pagina quiere acceder a la opcion de Contact Us" classname="Atencion al cliente para visitantes de la pagina web" time="17.725"/>
-  <testcase name="Envio de mensaje para contacto exitoso" classname="Atencion al cliente para visitantes de la pagina web" time="15.763"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[mar. 27, 2022 12:55:03 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+  <testcase name="Visitante de la pagina quiere acceder a la opcion de Contact Us" classname="Atencion al cliente para visitantes de la pagina web" time="18.333"/>
+  <testcase name="Envio de mensaje para contacto exitoso" classname="Atencion al cliente para visitantes de la pagina web" time="18.108"/>
+  <system-out><![CDATA[2022-03-27 14:28:48 INFO  ContactUsStepDefinition:97 Datos ingresados en el formulario de Contact Us:
+ContactUsModel{subjectHeading=1, email='errol.olson@yahoo.com', message='Est sint qui qui. Natus nulla cupiditate error aut. Sed sunt minus qui.'}
+]]></system-out>
+  <system-err><![CDATA[mar. 27, 2022 2:28:13 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 31115
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 29158
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 27, 2022 12:55:07 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar. 27, 2022 2:28:17 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-mar. 27, 2022 12:55:20 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+mar. 27, 2022 2:28:31 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 4093
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 39103
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 27, 2022 12:55:21 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar. 27, 2022 2:28:33 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

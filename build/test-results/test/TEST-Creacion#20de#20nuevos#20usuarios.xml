@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Creacion de nuevos usuarios" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-27T19:28:51" hostname="LENOVO-PC" time="51.701">
+  <properties/>
+  <testcase name="Validacion de correo electronico exitoso" classname="Creacion de nuevos usuarios" time="23.051"/>
+  <testcase name="Registro exitoso de nuevo usuario con campos obligatorios" classname="Creacion de nuevos usuarios" time="28.65"/>
+  <system-out><![CDATA[2022-03-27 14:29:12 INFO  CreateAccountStepDefinition:57 Email generado por javafaker kareem.hoeger@example.com
+2022-03-27 14:29:34 INFO  CreateAccountStepDefinition:85 Email generado por javafaker melina.denesik@yahoo.com
+2022-03-27 14:29:42 INFO  CreateAccountStepDefinition:116 Informacion de usuario generada por javafaker:
+CreateAccountModel{firstName='Leonel', lastName='Wintheiser', email='melina.denesik@yahoo.com', password='TXLYcsGB45yq', address='56137 Milo Street', city='West Santos', state=12, postalCode='73606', mobilePhone='404-569-3140'}
+]]></system-out>
+  <system-err><![CDATA[mar. 27, 2022 2:28:51 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 44618
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar. 27, 2022 2:28:53 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+mar. 27, 2022 2:29:14 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 10922
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar. 27, 2022 2:29:20 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

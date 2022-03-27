@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Creacion de nuevos usuarios" skipped="0" tests="2" time="49.66" timestamp="2022-03-27 02:28:51"><testcase name="Validacion de correo electronico exitoso"/><testcase name="Registro exitoso de nuevo usuario con campos obligatorios"/></testsuite>

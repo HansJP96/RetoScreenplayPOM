@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 
 import static co.com.sofka.question.createaccount.SuccessfulRegister.getDesiredWelcomeMessage;
 import static co.com.sofka.question.createaccount.SuccessfulRegister.successfulRegister;
@@ -38,7 +39,8 @@ public class CreateAccountStepDefinition extends Setup {
                             openHomePage()
                     );
         } catch (Exception exception) {
-            LOGGER.error("Error accediendo al home de la pagina", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error accediendo al home de la pagina");
         }
     }
 
@@ -52,8 +54,10 @@ public class CreateAccountStepDefinition extends Setup {
                                     .typeAnEmail(newAccount.getEmail())
                                     .andVerifyEmail()
                     );
+            LOGGER.info("Email generado por javafaker "+ newAccount.getEmail());
         } catch (Exception exception) {
-            LOGGER.error("Error validando email", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error validando email");
         }
     }
 
@@ -78,8 +82,10 @@ public class CreateAccountStepDefinition extends Setup {
                                     .typeAnEmail(newAccount.getEmail())
                                     .andVerifyEmail()
                     );
+            LOGGER.info("Email generado por javafaker "+ newAccount.getEmail());
         } catch (Exception exception) {
-            LOGGER.error("Error validando email", exception);
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error validando email");
         }
     }
 
@@ -93,6 +99,7 @@ public class CreateAccountStepDefinition extends Setup {
         newAccount.setState(faker.number().numberBetween(1, State.values().length));
         newAccount.setPostalCode(faker.number().digits(5));
         newAccount.setMobilePhone(faker.phoneNumber().cellPhone());
+        try {
         theActorInTheSpotlight()
                 .attemptsTo(
                         fillRequiredRegisterFields()
@@ -101,11 +108,16 @@ public class CreateAccountStepDefinition extends Setup {
                                 .typingAPassword(newAccount.getPassword())
                                 .typingACity(newAccount.getCity())
                                 .typingAnAddress(newAccount.getAddress())
-                                .selectedAState(newAccount.getState())
+                                .selectingAState(newAccount.getState())
                                 .typingAPostalCode(newAccount.getPostalCode())
                                 .typingAMobilePhone(newAccount.getMobilePhone())
                                 .andClickingRegister()
                 );
+            LOGGER.info("Informacion de usuario generada por javafaker:\n"+ newAccount);
+        } catch (Exception exception){
+            LOGGER.error(exception.getMessage(), exception);
+            Assertions.fail("Error llenando los campos para el registro");
+        }
     }
 
     @Then("observa un mensaje de que su registro fue exitoso")

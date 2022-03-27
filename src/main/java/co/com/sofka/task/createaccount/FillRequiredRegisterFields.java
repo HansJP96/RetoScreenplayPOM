@@ -46,7 +46,7 @@ public class FillRequiredRegisterFields implements Task {
         this.city= city;
         return this;
     }
-    public FillRequiredRegisterFields selectedAState(int state){
+    public FillRequiredRegisterFields selectingAState(int state){
         this.state= state;
         return this;
     }

@@ -34,7 +34,7 @@ public class BrowseToRegisterInitialPage implements Task {
                 Scroll.to(REGISTER_EMAIL),
                 Enter.theValue(email).into(REGISTER_EMAIL),
 
-                Scroll.to(HOME_SIGN_IN),
+                Scroll.to(SUBMIT_CREATE),
                 Click.on(SUBMIT_CREATE)
         );
     }
